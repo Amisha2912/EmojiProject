@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(200, 71, 114); 
+}
+
+h1{
+    padding:20px;
+    text-align: center;
+    font-size: 3rem;
+    color: lavenderblush;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+}
+.upper{
+   border-bottom: 2px solid black;
+   border-radius: 0 0 30px 30px;
+   box-shadow: 0 0 50px black;
+   border:none;
+   /* background-color: white; */
+   background: transparent;
+}
+#search{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    padding: 30px;
+
+
+    #getSearch{
+        width: 20vw;
+        height: 2rem;
+        border-radius: 20px;
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    .options{
+        font-size: 1.2rem;
+        .opt{
+            border: 1px solid black;
+            padding:10px 20px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            color: white;
+            transition: 0.4s ease;
+        }
+    }
+}
+
+.options .opt:hover{
+    background: linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+    transform: scale(1.2);
+    
+}
+
+
+/* .upper hr{
+    box-shadow: 0 0 80px black;
+    border-radius: 30px;
+    border:none;
+    height: 5px;
+    background: black;
+} */
+#main-container{
+    margin:auto;
+    margin-top: 20px;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    
+
+    span{
+        width:100px;
+        height: 100px;
+        font-size: 3rem;
+        margin: 20px;
+        border: 2px solid rgba(0,0,0,0.2);
+        border-radius: 20px;
+        display: flex;              /* Use flexbox for layout */
+        flex-direction: column;     /* Stack children vertically */
+        align-items: center; 
+        cursor: pointer;
+        background-color: white;
+        font-family: Arial, sans-serif;
+        transition: all 1s ease;
+       
+    }
+
+    span .notify{
+        width: 95px;               /* Ensure width matches the parent */
+        height: 40px;               /* Adjust height if needed */
+        font-size: 27px;
+        font-weight: 600;            /* Font size for the copied message */
+        margin: 0;    
+        opacity: 1;                  /* Set initial opacity */
+        transition: opacity 0.5s ease; /* Smooth fade-out transition */
+        font-family: Arial, sans-serif;
+        color:rgb(200, 71, 114);
+        border: none;
+    }
+}
+
+#main-container span:hover{
+      box-shadow: 0 0 40px black;
+      scale:1.2;
+}
+
+.options{
+    display: flex;
+    gap:10px;
+    cursor: pointer;
+}
+
+
+
+/*++++responsiveness+++++*/
+
+@media(max-width:840px){
+    h1{
+        font-size: 2rem;
+    }
+
+    #search{
+        justify-content: space-between;
+        padding:0 20px;
+    }
+
+
+    .options{
+        scale:0.8;
+    }
+}
+
+
+@media(max-width:780px){
+    #getSearch{
+        width:60vw !important;
+    }
+    #search{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media(max-width:512px){
+
+    #getSearch{
+        margin-bottom: 20px;
+    }
+
+    .options{
+        display:none;
+    }
+}
